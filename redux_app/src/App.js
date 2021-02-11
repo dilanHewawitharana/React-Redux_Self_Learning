@@ -21,8 +21,11 @@ function App() {
         { !isLogedIn ? <button 
                         style={{marginTop: '15px'}} 
                         className="ui inverted blue button"
-                        onClick={() => dispatch(loggedIn())}
-                       >Login</button> : null}
+                        onClick={() => dispatch(loggedIn())}>Login</button> : 
+                        <div>
+                          <p> You are loggedIn</p>
+                          <button className="ui inverted red button" onClick={() => dispatch(loggedIn())}>Log Out</button>
+                        </div>}
       </div>
     </div>
   );
